@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>come on 6 we can do this</h2>
+        <h3>Player 1</h3>
+        <h3 id="status">anyone want to play? </h3>
+
+        <div class="flexy">
+            <div id="the rules">
+                <p>
+                    <b>
+                        How to Play
+                    </b>
+
+                    <br>
+                <p>
+                    The aim of the game is to get a score of 24 without rolling a 1.
+                </p>
+                    <br>
+                <p>
+                    If you roll at 1, you lose and you have to strt the game again.
+                </p>
+                <button id="restart">Restart</button>
+            </div>
+            <div class="dice-container">
+                <div class="score-box">
+                    <h3 class="scoreTitle">Score:</h3>
+                    <p id="scoreCount">0</p>
+                </div>
+
+                <img src="img/number1dice.jpg" alt="Dice image" id="die"></img>
+                <br>
+                <button id="roll" type="roll">Roll</button>
+            </div>
+
+
+
+
+        </div>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
