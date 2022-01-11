@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme"><head>
+    <meta charset="UTF-8">
+    <title>keycode challenge</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JavaScript Event KeyCodes">
+    <meta name="twitter:description" content="Keycode testing tool - which keys map to which keycodes?">
+    <meta name="twitter:creator" content="@wesbos">
+    <meta name="twitter:image" content="https://cdn1.imggmi.com/uploads/2019/7/12/f6b03f5628f7850649714200ab517a52-full.png">
+    <link rel="stylesheet" href="style.css?v=07232021">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon">
+  <script charset="utf-8" src="https://platform.twitter.com/js/button.0d6aa7fd095b2a9dd19cc66c7c2ed64b.js"></script></head>
+  
+  <body>
+    <canvas width="128" height="128" hidden=""></canvas>
+    <div class="display">
+      <table class="table hide">
+        <thead>
+          <tr>
+            <th>Key Code</th>
+            <th>Key</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+        <tr><td>0</td><td>That key has no keycode</td></tr><tr><td>3</td><td>break</td></tr><tr><td>8</td><td>backspace / delete</td></tr><tr><td>9</td><td>tab</td></tr><tr><td>12</td><td>clear</td></tr><tr><td>13</td><td>enter</td></tr><tr><td>16</td><td>shift</td></tr><tr><td>17</td><td>ctrl</td></tr><tr><td>18</td><td>alt</td></tr><tr><td>19</td><td>pause/break</td></tr><tr><td>20</td><td>caps lock</td></tr><tr><td>21</td><td>hangul</td></tr><tr><td>25</td><td>hanja</td></tr><tr><td>27</td><td>escape</td></tr><tr><td>28</td><td>conversion</td></tr><tr><td>29</td><td>non-conversion</td></tr><tr><td>32</td><td>spacebar</td></tr><tr><td>33</td><td>page up</td></tr><tr><td>34</td><td>page down</td></tr><tr><td>35</td><td>end</td></tr><tr><td>36</td><td>home</td></tr><tr><td>37</td><td>left arrow</td></tr><tr><td>38</td><td>up arrow</td></tr><tr><td>39</td><td>right arrow</td></tr><tr><td>40</td><td>down arrow</td></tr><tr><td>41</td><td>select</td></tr><tr><td>42</td><td>print</td></tr><tr><td>43</td><td>execute</td></tr><tr><td>44</td><td>Print Screen</td></tr><tr><td>45</td><td>insert</td></tr><tr><td>46</td><td>delete</td></tr><tr><td>47</td><td>help</td></tr><tr><td>48</td><td>0</td></tr><tr><td>49</td><td>1</td></tr><tr><td>50</td><td>2</td></tr><tr><td>51</td><td>3</td></tr><tr><td>52</td><td>4</td></tr><tr><td>53</td><td>5</td></tr><tr><td>54</td><td>6</td></tr><tr><td>55</td><td>7</td></tr><tr><td>56</td><td>8</td></tr><tr><td>57</td><td>9</td></tr><tr><td>58</td><td>:</td></tr><tr><td>59</td><td>semicolon (firefox), equals</td></tr><tr><td>60</td><td>&lt;</td></tr><tr><td>61</td><td>equals (firefox)</td></tr><tr><td>63</td><td>ß</td></tr><tr><td>64</td><td>@ (firefox)</td></tr><tr><td>65</td><td>a</td></tr><tr><td>66</td><td>b</td></tr><tr><td>67</td><td>c</td></tr><tr><td>68</td><td>d</td></tr><tr><td>69</td><td>e</td></tr><tr><td>70</td><td>f</td></tr><tr><td>71</td><td>g</td></tr><tr><td>72</td><td>h</td></tr><tr><td>73</td><td>i</td></tr><tr><td>74</td><td>j</td></tr><tr><td>75</td><td>k</td></tr><tr><td>76</td><td>l</td></tr><tr><td>77</td><td>m</td></tr><tr><td>78</td><td>n</td></tr><tr><td>79</td><td>o</td></tr><tr><td>80</td><td>p</td></tr><tr><td>81</td><td>q</td></tr><tr><td>82</td><td>r</td></tr><tr><td>83</td><td>s</td></tr><tr><td>84</td><td>t</td></tr><tr><td>85</td><td>u</td></tr><tr><td>86</td><td>v</td></tr><tr><td>87</td><td>w</td></tr><tr><td>88</td><td>x</td></tr><tr><td>89</td><td>y</td></tr><tr><td>90</td><td>z</td></tr><tr><td>91</td><td>Windows Key / Left ⌘ / Chromebook Search key</td></tr><tr><td>92</td><td>right window key</td></tr><tr><td>93</td><td>Windows Menu / Right ⌘</td></tr><tr><td>95</td><td>sleep</td></tr><tr><td>96</td><td>numpad 0</td></tr><tr><td>97</td><td>numpad 1</td></tr><tr><td>98</td><td>numpad 2</td></tr><tr><td>99</td><td>numpad 3</td></tr><tr><td>100</td><td>numpad 4</td></tr><tr><td>101</td><td>numpad 5</td></tr><tr><td>102</td><td>numpad 6</td></tr><tr><td>103</td><td>numpad 7</td></tr><tr><td>104</td><td>numpad 8</td></tr><tr><td>105</td><td>numpad 9</td></tr><tr><td>106</td><td>multiply</td></tr><tr><td>107</td><td>add</td></tr><tr><td>108</td><td>numpad period (firefox)</td></tr><tr><td>109</td><td>subtract</td></tr><tr><td>110</td><td>decimal point</td></tr><tr><td>111</td><td>divide</td></tr><tr><td>112</td><td>f1</td></tr><tr><td>113</td><td>f2</td></tr><tr><td>114</td><td>f3</td></tr><tr><td>115</td><td>f4</td></tr><tr><td>116</td><td>f5</td></tr><tr><td>117</td><td>f6</td></tr><tr><td>118</td><td>f7</td></tr><tr><td>119</td><td>f8</td></tr><tr><td>120</td><td>f9</td></tr><tr><td>121</td><td>f10</td></tr><tr><td>122</td><td>f11</td></tr><tr><td>123</td><td>f12</td></tr><tr><td>124</td><td>f13</td></tr><tr><td>125</td><td>f14</td></tr><tr><td>126</td><td>f15</td></tr><tr><td>127</td><td>f16</td></tr><tr><td>128</td><td>f17</td></tr><tr><td>129</td><td>f18</td></tr><tr><td>130</td><td>f19</td></tr><tr><td>131</td><td>f20</td></tr><tr><td>132</td><td>f21</td></tr><tr><td>133</td><td>f22</td></tr><tr><td>134</td><td>f23</td></tr><tr><td>135</td><td>f24</td></tr><tr><td>136</td><td>f25</td></tr><tr><td>137</td><td>f26</td></tr><tr><td>138</td><td>f27</td></tr><tr><td>139</td><td>f28</td></tr><tr><td>140</td><td>f29</td></tr><tr><td>141</td><td>f30</td></tr><tr><td>142</td><td>f31</td></tr><tr><td>143</td><td>f32</td></tr><tr><td>144</td><td>num lock</td></tr><tr><td>145</td><td>scroll lock</td></tr><tr><td>151</td><td>airplane mode</td></tr><tr><td>160</td><td>^</td></tr><tr><td>161</td><td>!</td></tr><tr><td>162</td><td>؛ (arabic semicolon)</td></tr><tr><td>163</td><td>#</td></tr><tr><td>164</td><td>$</td></tr><tr><td>165</td><td>ù</td></tr><tr><td>166</td><td>page backward</td></tr><tr><td>167</td><td>page forward</td></tr><tr><td>168</td><td>refresh</td></tr><tr><td>169</td><td>closing paren (AZERTY)</td></tr><tr><td>170</td><td>*</td></tr><tr><td>171</td><td>~ + * key</td></tr><tr><td>172</td><td>home key</td></tr><tr><td>173</td><td>minus (firefox), mute/unmute</td></tr><tr><td>174</td><td>decrease volume level</td></tr><tr><td>175</td><td>increase volume level</td></tr><tr><td>176</td><td>next</td></tr><tr><td>177</td><td>previous</td></tr><tr><td>178</td><td>stop</td></tr><tr><td>179</td><td>play/pause</td></tr><tr><td>180</td><td>e-mail</td></tr><tr><td>181</td><td>mute/unmute (firefox)</td></tr><tr><td>182</td><td>decrease volume level (firefox)</td></tr><tr><td>183</td><td>increase volume level (firefox)</td></tr><tr><td>186</td><td>semi-colon / ñ</td></tr><tr><td>187</td><td>equal sign</td></tr><tr><td>188</td><td>comma</td></tr><tr><td>189</td><td>dash</td></tr><tr><td>190</td><td>period</td></tr><tr><td>191</td><td>forward slash / ç</td></tr><tr><td>192</td><td>grave accent / ñ / æ / ö</td></tr><tr><td>193</td><td>?, / or °</td></tr><tr><td>194</td><td>numpad period (chrome)</td></tr><tr><td>219</td><td>open bracket</td></tr><tr><td>220</td><td>back slash</td></tr><tr><td>221</td><td>close bracket / å</td></tr><tr><td>222</td><td>single quote / ø / ä</td></tr><tr><td>223</td><td>`</td></tr><tr><td>224</td><td>left or right ⌘ key (firefox)</td></tr><tr><td>225</td><td>altgr</td></tr><tr><td>226</td><td>&lt; /git &gt;, left back slash</td></tr><tr><td>230</td><td>GNOME Compose Key</td></tr><tr><td>231</td><td>ç</td></tr><tr><td>233</td><td>XF86Forward</td></tr><tr><td>234</td><td>XF86Back</td></tr><tr><td>235</td><td>non-conversion</td></tr><tr><td>240</td><td>alphanumeric</td></tr><tr><td>242</td><td>hiragana/katakana</td></tr><tr><td>243</td><td>half-width/full-width</td></tr><tr><td>244</td><td>kanji</td></tr><tr><td>251</td><td>unlock trackpad (Chrome/Edge)</td></tr><tr><td>255</td><td>toggle touchpad</td></tr></tbody>
+      </table>
+      <div class="wrap" aria-live="polite" aria-atomic="true">
+        <p class="keycode-display">85</p>
+        <p class="text-display hide">Press any key to get the JavaScript event keycode</p>
+        <div class="cards active">
+          <div class="card item-key">
+            <div class="card-header">event.key</div>
+            <div class="card-main">
+              <div class="main-description">u</div>
+            </div>
+          </div>
+          <div class="card item-location">
+            <div class="card-header">event.location
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/location" target="_blank" rel="noopener" class="more-info"></a>
+            </div>
+            <div class="card-main">
+              <div class="main-description">0 <span class="text-muted">(General keys)</span></div>
+            </div>
+          </div>
+          <div class="card item-which">
+            <div class="card-header">
+              event.which
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank" rel="noopener" class="deprecated-link">(deprecated)</a>
+            </div>
+            <div class="card-main">
+              <div class="main-description">85</div>
+            </div>
+          </div>
+          <div class="card item-code">
+            <div class="card-header">event.code</div>
+            <div class="card-main">
+              <div class="main-description">KeyU</div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-input">
+        </div>
+      </div>
+      <div class="fixed-buttons">
+        <button id="table-button" onclick="{toggleTable()}" class="toggle-button">Table</button>
+        <button id="theme-button" onclick="{toggleTheme()}" class="toggle-button">Light theme</button>
+      </div>
+    </div>
+  
+    <span class="love">Made with love by
+      <a href="https://wesbos.com" target="_blank" rel="noopener">Wes Bos</a> — fork or suggest edits on
+      <a href="https://github.com/wesbos/keycodes" target="_blank" rel="noopener">GitHub</a> —
+  
+      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 132px; height: 21px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.21f942bb866c2823339b839747a0c50c.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=wesbos&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1641484872416" data-screen-name="wesbos"></iframe>
+  
+      <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 73px; height: 21px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.21f942bb866c2823339b839747a0c50c.en.html#dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=https%3A%2F%2Fkeycode.info%2F&amp;related=wesbos&amp;size=m&amp;text=Nice%20tool%20for%20finding%20JavaScript%20event%20keycodes&amp;time=1641484872417&amp;type=share&amp;url=https%3A%2F%2Fkeycode.info&amp;via=wesbos" data-url="https://keycode.info"></iframe>
+  
+  
+    </span>
+  
+    <script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js');
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="scripts.js?v=07232021"></script>
+    <script src="google-analytics.js"></script>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;b45decb6c8304abfaafe7d19167b59b5&quot;}"></script>
+  
+  
+  
+  <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.21f942bb866c2823339b839747a0c50c.html?origin=https%3A%2F%2Fkeycode.info" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body></html>
